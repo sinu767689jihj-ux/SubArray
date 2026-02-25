@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class SubArray{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the size of the Array:");
+        int n=sc.nextInt();
+        System.out.println("Enter the Elements into Array:");
+        int[] arr=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        //implement the logic to find the all SubArrays
+        /*1 length elements->[1],[2],[3],[4].Index position(0 to 0),(1 to 1),(2 to 2),(3 to 3)
+        2 length elements->[1,2],[2,3],[3.4].Index position(0 to 1),(1 to 2),(2 to 3).
+        3 length elements->[1,2,3],[2,3,4].Index position(0 to 2),(1 to 3).
+        4 length elements->[1,2,3,4].Index position(0 to 3).
+        */
+        //now we are representing only index positions
+        for(int i=0;i<n;i++)
+        {
+            for(int j=i;j<n;j++)
+            {
+                System.out.println(i+" "+j);
+            }
+        }
+        sc.close();
+    }
+}
